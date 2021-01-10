@@ -1,16 +1,37 @@
-# elementui-pro
-
-> 基于基础组件库 ``element-ui@2.x`` 而封装的业务组件。
-
-todolist
-
-- [] 111
-- [x] 222
-- [ ] 333
+# vue-docs-template
 
 ## Project setup
-
-```bash
-npm install
-npm run dev
 ```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Run your unit tests
+```
+yarn test:unit
+```
+
+### Run your end-to-end tests
+```
+yarn test:e2e
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+https://www.cnblogs.com/walkermag/archive/2004/01/13/13360105.html

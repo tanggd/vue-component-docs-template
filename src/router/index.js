@@ -1,29 +1,34 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
+import navConf from '../nav.config.js'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+let routes = []
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+Object.keys(navConf).forEach((header) => {
+  routes = routes.concat(navConf[header])
 })
 
-export default router
+const addComponent = (router) => {
+  console.log(router)
+  router.forEach((route) => {
+    if (route.items) {
+      addComponent(route.items)
+      routes = routes.concat(route.items)
+    } else {
+      if (route.type === 'pages') {
+        route.component = r => require.ensure([], () =>
+          r(require(`../views/${route.name}.vue`)))
+        return
+      }
+      route.component = r => require.ensure([], () =>
+        r(require(`../docs/${route.name}.md`)))
+    }
+  })
+}
+addComponent(routes)
+
+export default new Router({
+  routes: routes
+})

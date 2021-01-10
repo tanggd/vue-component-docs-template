@@ -1,10 +1,9 @@
 {
-  "name": "elementui-pro",
-  "version": "0.0.1",
-  "description": "elementui pro",
-  "main": "index.js",
+  "name": "vue-component-docs-template",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve",
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
@@ -13,7 +12,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "element-ui": "^2.13.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
@@ -22,20 +20,23 @@
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
-    "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.5",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "highlight.js": "^10.5.0",
     "lint-staged": "^9.5.0",
-    "sass": "^1.26.5",
+    "markdown-it": "^12.0.4",
+    "markdown-it-container": "^3.0.0",
+    "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
@@ -50,17 +51,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tanggd/elementui-pro.git"
+    "url": "git+https://github.com/tanggd/vue-component-docs-template.git"
   },
   "keywords": [
     "vue",
-    "element",
-    "elementui"
+    "vue-component-docs",
+    "template"
   ],
   "author": "tanggd <tanggd11@foxmail.com> (https://github.com/tanggd)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tanggd/elementui-pro/issues"
+    "url": "https://github.com/tanggd/vue-component-docs-template/issues"
   },
-  "homepage": "https://github.com/tanggd/elementui-pro#readme"
+  "homepage": "https://github.com/tanggd/vue-component-docs-template#readme"
 }
