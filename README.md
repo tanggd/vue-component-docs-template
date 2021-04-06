@@ -1,6 +1,6 @@
 # vue-docs-template
 
-vue组件库开发环境架子
+基于 `vue-cli` 搭建，`vue` 组件库开发环境架子
 
 ## 使用
 
