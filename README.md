@@ -1,37 +1,19 @@
 # vue-docs-template
 
-## Project setup
-```
-yarn install
-```
+vue组件库开发环境架子
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 使用
 
-### Compiles and minifies for production
-```
-yarn build
-```
+```bash
+# clone
+git clone https://github.com/tanggd/vue-component-docs-template.git
 
-### Run your unit tests
-```
-yarn test:unit
-```
+# install
+npm install
 
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
+# dev
+npm run dev
 
-### Lints and fixes files
+# build
+npm run build
 ```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-https://www.cnblogs.com/walkermag/archive/2004/01/13/13360105.html
