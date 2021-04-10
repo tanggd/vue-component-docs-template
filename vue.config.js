@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  publicPath: '/vue-component-docs-template',
   chainWebpack: config => {
     config.module
       .rule('md')
