@@ -1,23 +1,23 @@
 <template>
   <button
-    class="kv-button"
+    class="t-button"
     @click="handleClick"
     :disabled="buttonDisabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
     :class="[
-      type ? 'kv-button--' + type : '',
-      buttonSize ? 'kv-button--' + buttonSize : '',
+      type ? 't-button--' + type : '',
+      buttonSize ? 't-button--' + buttonSize : '',
       {
         'is-disabled': buttonDisabled,
         'is-loading': loading,
         'is-plain': plain,
         'is-round': round,
-        'is-circle': circle
-      }
+        'is-circle': circle,
+      },
     ]"
   >
-    <i class="kv-icon-loading" v-if="loading"></i>
+    <i class="t-icon-loading" v-if="loading"></i>
     <i :class="icon" v-if="icon && !loading"></i>
     <span v-if="$slots.default"><slot></slot></span>
   </button>

@@ -1,25 +1,9 @@
-import KvAlert from './components/alert'
-import KvBacktop from './components/backtop'
-import KvBreadcrumbItem from './components/breadcrumb-item'
-import KvButton from './components/button'
-import KvIcon from './components/icon'
-import KvTag from './components/tag'
-import KvSkeleton from './components/skeleton'
-import KvRow from './components/row'
-import KvCol from './components/col'
-import KvShowmore from './components/show-more'
+import TAlert from './components/alert'
+import TButton from './components/button'
 
 const components = {
-  KvAlert,
-  KvBacktop,
-  KvBreadcrumbItem,
-  KvButton,
-  KvIcon,
-  KvTag,
-  KvSkeleton,
-  KvRow,
-  KvCol,
-  KvShowmore
+  TAlert,
+  TButton
 }
 
 const install = (Vue) => {

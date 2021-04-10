@@ -26,8 +26,8 @@ var renderMd = function (html, fileName) {
     styleStr += $(item).html()
   })
 
-  $('div.kv-demo').each((index, item) => {
-    const componentName = `kv-demo${id}`
+  $('div.t-demo').each((index, item) => {
+    const componentName = `t-demo${id}`
     const vueTeml = renderVueTemplate($(item).html(), componentName)
 
     $(item).replaceWith(`<template slot="source"><${componentName} /></template>`)
@@ -128,14 +128,14 @@ parser.use(require('markdown-it-container'), 'demo', {
   validate (params) {
     return params.trim().match(/^demo\s*(.*)$/)
   },
-  // 把demo代码放到div.kv-demo里面
+  // 把demo代码放到div.t-demo里面
   render (tokens, idx) {
     const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
     if (tokens[idx].nesting === 1) {
       const content = tokens[idx + 1].type === 'fence' ? tokens[idx + 1].content : ''
       // 先把demo中的代码放到demo-block的之中，然后程序继续render fence，按照上面的fence规则渲染出代码部分，作为隐藏的查看代码。
       // console.log(content)
-      return `<demo-block><div  class="kv-demo">${content}</div>`
+      return `<demo-block><div  class="t-demo">${content}</div>`
     }
     return '</demo-block>'
   }
